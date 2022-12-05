@@ -25,7 +25,9 @@ public class WindowsLinkTileService extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        Intent intent = new Intent(this, StartUpActivity.class);
+        Intent intent = new Intent(this, RouterActivity.class);
+//        intent.setAction(Intent.ACTION_MAIN);
+//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivityAndCollapse(intent);
     }

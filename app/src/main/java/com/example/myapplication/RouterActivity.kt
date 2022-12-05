@@ -7,20 +7,18 @@ import android.app.NotificationManager
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.telephony.SubscriptionManager
 import android.util.Log
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-class StartUpActivity : Activity() {
+class RouterActivity : Activity() {
     @SuppressLint("MissingPermission")
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onCreate(savedInstanceState: Bundle?) {
         initChannel();
         super.onCreate(savedInstanceState)
-        startActivity(Intent(this, SecActivity::class.java))
-        finish()
+        startActivity(Intent(this, MainActivity::class.java))
+//        finish()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
